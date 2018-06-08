@@ -1,0 +1,8 @@
+<h1> here is my dash </h1>
+<%=icon('fas', 'flag') %>
+
+<% @instructors.each do |i| %>
+<div>
+ <%= i.first_name  %>
+</div>
+<% end %>

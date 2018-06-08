@@ -3,11 +3,12 @@ Rails.application.routes.draw do
   resources :cohorts
   resources :instructors
   resources :courses
-  resources :students 
-  #   member do
-  #     get '/add_cohort'
-  #   end
-  # end
+  resources :students
   resources :cohort_students
 
+  root to: 'dashboard#home'
+
+   # post '/cakes/:id/toggle-status', to: 'cakes#toggle_status', as: :toggle_cake_status
+   #
+   # post '/muffins/:id/toggle-status', to: 'muffins#toggle_status', as: :toggle_muffin_status
 end

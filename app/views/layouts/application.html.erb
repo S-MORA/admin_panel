@@ -10,6 +10,64 @@
   </head>
 
   <body>
+    <div class="wrapper">
+      <!-- Sidebar Holder -->
+      <nav id="sidebar">
+        <div class="sidebar-header m-4">
+          <div style="width: 100px" class="mx-auto">
+            <%= image_tag image_path('logo.png') %>
+          </div>
+          <div style="width: 140px" class="mx-auto">
+            <h3 class="md-open-sans m-2"><strong>GRADE</strong>LINK</h3>
+          </div>
+
+        </div>
+
+
+        <ul class="list-unstyled components">
+          <div style="font-size:3em; color:#fefef9; width: 50px" class="mx-auto">
+            <i class="fas fa-user-circle mx-auto"></i>
+          </div>
+
+          <div style="width: 130px" class="mx-auto">
+            <div class="md-font-white">User Name</div>
+          </div>
+          <div style="width: 90px" class="mx-auto">
+            <div class="sm-font">User Type</div>
+          </div>
+          <div class="container-fluid">
+            <div class="row">
+
+              <div class="col-lg-12 pr-0">
+                <li class="active">
+                  <a href="#" class="my-3">
+                    <i class="fas fa-home ml-4"></i>
+                   <span class="float-right mr-4">Dashboard</span>
+                  </a>
+                </li>
+              </div>
+              <div class="col-lg-12 pr-0">
+                <li class="">
+                  <a href="#" class="my-3">
+                    <i class="fas fa-users ml-4"></i>
+                   <span class="float-right mr-4">Users</span>
+                  </a>
+                </li>
+              </div>
+              <div class="col-lg-12 pr-0">
+                <li class="">
+                  <a href="#" class="my-3">
+                    <i class="fas fa-cog ml-4"></i>
+                   <span class="float-right mr-4">Account</span>
+                  </a>
+                </li>
+              </div>
+            </div>
+          </div>
+
+        </ul>
+      </nav>
+
     <%= yield %>
   </body>
 </html>

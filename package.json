@@ -1,5 +1,9 @@
 {
   "name": "rails_Admin_Panel",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "bootstrap": "4.1.1",
+    "jquery": "^3.3.1",
+    "toastr": "^2.1.4"
+  }
 }
