@@ -3,13 +3,20 @@ class CohortsController < ApplicationController
     @cohorts = Cohort.all
   end
   def new
+    @courses = Course.all
+    @instructors = Instructor.all
     @cohort = Cohort.new
   end
   def show
     @cohort = Cohort.find(params[:id])
   end
   def create
+    @instructors = Instructor.all
+    @courses = Course.all
+    byebug
     Cohort.create(cohort_params)
+
+
     redirect_to cohorts_path
   end
   def edit
