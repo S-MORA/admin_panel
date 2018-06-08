@@ -13,10 +13,7 @@ class CohortsController < ApplicationController
   def create
     @instructors = Instructor.all
     @courses = Course.all
-    byebug
     Cohort.create(cohort_params)
-
-
     redirect_to cohorts_path
   end
   def edit

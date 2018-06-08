@@ -3,6 +3,11 @@ Rails.application.routes.draw do
   resources :cohorts
   resources :instructors
   resources :courses
-  resources :students
+  resources :students 
+  #   member do
+  #     get '/add_cohort'
+  #   end
+  # end
+  resources :cohort_students
 
 end
