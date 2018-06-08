@@ -1,0 +1,39 @@
+<%= form_for @instructor do |i| %>
+ <div>
+    <%= i.label :first_name %>
+    <%= i.text_field :first_name %>
+ </div>
+
+ <div>
+    <%= i.label :last_name %>
+    <%= i.text_field :last_name %>
+ </div>
+
+ <div>
+    <%= i.label :dob %>
+    <%= i.date_field :dob %>
+ </div>
+
+ <div>
+    <%= i.label :salary %>
+    <%= i.number_field :salary %>
+ </div>
+
+ <div>
+    <%= i.label :education %> <br>
+
+    <%= i.label :education, "High School" %>
+    <%= i.radio_button :education, "High School" %>
+
+    <%= i.label :education, "Bachelor's Degree" %>
+    <%= i.radio_button :education, "Bachelor's Degree"%>
+
+    <%= i.label :education, "Master's Degree" %>
+    <%= i.radio_button :education, "Master's Degree"%>
+
+ </div>
+
+ <div>
+  <%= i.submit %>
+ </div>
+<% end %>

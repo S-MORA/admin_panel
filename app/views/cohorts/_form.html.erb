@@ -1,0 +1,32 @@
+<%= form_for @cohort do |c| %>
+ <div>
+    <%= c.label :name %>
+    <%= c.text_field :name %>
+ </div>
+
+ <div>
+    <%= c.label :course_id %>
+    <%= c.text_field :course_id %>
+ </div>
+
+ <div>
+    <%= c.label :instructor_id %>
+    <%= c.text_field :instructor_id %>
+ </div>
+
+ <div>
+    <%= c.label :start_date %>
+    <%= c.number_field :start_date %>
+ </div>
+
+ <div>
+    <%= c.label :end_date %>
+    <%= c.number_field :end_date %>
+ </div>
+
+
+ <div>
+    <%= c.submit %>
+ </div>
+
+<% end %>

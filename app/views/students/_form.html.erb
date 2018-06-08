@@ -1,0 +1,34 @@
+<%= form_for @student do |s| %>
+ <div>
+    <%= s.label :first_name %>
+    <%= s.text_field :first_name %>
+ </div>
+
+ <div>
+    <%= s.label :last_name %>
+    <%= s.text_field :last_name %>
+ </div>
+
+ <div>
+    <%= s.label :dob %>
+    <%= s.date_field :dob %>
+ </div>
+
+ <div>
+    <%= s.label :education %> <br>
+
+    <%= s.label :education, "High School" %>
+    <%= s.radio_button :education, "High School" %>
+
+    <%= s.label :education, "Bachelor's Degree" %>
+    <%= s.radio_button :education, "Bachelors Degree"%>
+
+    <%= s.label :education, "Master's Degree" %>
+    <%= s.radio_button :education, "Bachelors Degree"%>
+
+ </div>
+
+ <div>
+    <%= s.submit %>
+ </div>
+<% end %>
