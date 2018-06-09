@@ -1,14 +1,1 @@
-<h1> here you can is the instructors Home Page </h1>
-<h4> <%= link_to 'Create a new Instructor', new_instructor_path %>
-</h4>
-
-
-<% @instructors.each do |instructor| %>
-<div>
-  First Name: <%= instructor.first_name  %>
-</div>
-<div>
-  Last Name: <%= instructor.last_name  %>
-</div>
-
-<% end %>
+  <%= render 'shared/user_list', locals: {users: @instructors} %>

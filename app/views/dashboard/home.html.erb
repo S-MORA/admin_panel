@@ -1,8 +1,114 @@
-<h1> here is my dash </h1>
-<%=icon('fas', 'flag') %>
+<div id="content">
 
-<% @instructors.each do |i| %>
-<div>
- <%= i.first_name  %>
+  <div class="container-fluid">
+    <div class="row mx-5">
+      <div class="col-lg-12">
+        <div class="xlg-font underline d-inline">
+          Dashboard
+        </div>
+        <div class="md-font-white float-right">
+          Logout
+        </div>
+      </div>
+    </div>
+
+    <div class="row mx-5 mt-4">
+      <div class="col-lg-4">
+      <%= link_to instructors_path do %>
+        <div class="bx-color bx-sm">
+          <div class="row m-0 py-3">
+            <div class="col-lg-6 text-center">
+              <%= image_tag(image_path('instructor-icon.png'), :class => 'icon-width') %>
+            </div>
+            <div class="col-lg-6 md-font-white pl-0">
+              Instructors
+              <div class="col-lg-12 text-center xlg-font">
+                17
+              </div>
+            </div>
+          </div>
+        </div>
+        <% end %>
+      </div>
+
+      <div class="col-lg-4">
+       <%= link_to courses_path do %>
+        <div class="bx-color bx-sm">
+          <div class="row m-0 py-3">
+            <div class="col-lg-6 text-center">
+              <%= image_tag(image_path('instructor-icon.png'), :class => 'icon-width') %>
+            </div>
+            <div class="col-lg-6 md-font-white pl-0">
+              Courses
+              <div class="col-lg-12 text-center xlg-font">
+                17
+              </div>
+            </div>
+          </div>
+        </div>
+      <% end %>
+      </div>
+
+
+
+      <div class="col-lg-4">
+       <%= link_to students_path do %>
+        <div class="bx-color bx-sm">
+          <div class="row m-0 py-3">
+            <div class="col-lg-6 text-center">
+              <%= image_tag(image_path('instructor-icon.png'), :class => 'icon-width') %>
+            </div>
+            <div class="col-lg-6 md-font-white pl-0">
+              Students
+              <div class="col-lg-12 text-center xlg-font">
+                245
+              </div>
+            </div>
+          </div>
+        </div>
+        <% end %>
+      </div>
+
+    </div>
+
+    <div class="row m-5">
+
+      <div class="col-lg-7">
+        <div class="bx-color bx-lg">
+          <div class="col-lg-12 lg-font text-center p-3">
+            Calender
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-5">
+        <div class="bx-color bx-lg">
+          <div class="col-lg-12 lg-font text-center p-3">
+            User Analytics
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="row m-5">
+      <div class="col-lg-12">
+        <div class="bx-color bx-md">
+
+          <div class="col-lg-12 lg-font px-4 pt-2">
+            Upcoming To Do
+          </div>
+          <div class="col-lg-12 md-font-black p-3">
+            Pay Instructors
+          </div>
+
+
+        </div>
+      </div>
+
+
+
+    </div>
+  </div>
+
 </div>
-<% end %>
