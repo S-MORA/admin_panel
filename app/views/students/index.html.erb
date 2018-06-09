@@ -1,18 +1,1 @@
-<h1> here you can is the Students Home Page </h1>
-<h4> <%= link_to 'Create a new Student', new_student_path %>
-</h4>
-
-
-<% @students.each do |student| %>
-<div>
-  First Name: <%= student.first_name  %>
-</div>
-<div>
-  Last Name: <%= student.last_name  %>
-</div>
-
-<div>
-  <%= link_to 'Add Course', new_cohort_student_path  %>
-</div>
-
-<% end %>
+  <%= render partial: 'shared/user_list', locals: {users: @students} %>

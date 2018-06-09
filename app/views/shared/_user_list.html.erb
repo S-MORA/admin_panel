@@ -2,10 +2,14 @@
     <div id="content">
 
       <div class="container-fluid">
-        <div class="row mx-5">
+        <div class="row mx-3">
           <div class="col-lg-12">
             <div class="xlg-font underline d-inline">
-              Instructors Area
+            <% if users[0].try(:salary)   %>
+              Instructor's Area
+              <% else %>
+              Student's Area
+              <% end %>
             </div>
             <div class="md-font-white float-right">
               Logout
@@ -14,14 +18,31 @@
         </div>
 
 
-        <div class="row mx-5 mt-4">
+        <div class="row mx-3 mt-4">
 
           <div class="col-lg-12">
-            <div class="bx-color bx-sm">
-              <div class="lg-font p-3">
-                Instructors
-                <div class="xlg-font float-right">
-                  <i class="fas fa-plus-circle"></i>
+            <div class="bx-color bx-sm ">
+              <div class="">
+                <div class="">
+                  <%= image_tag image_path('instructor-icon.png'), :class => 'icon-width' %>
+                </div>
+                <div class="">
+                  Instructors
+                  13
+                </div>
+
+
+
+                <div class="float-right">
+             <% if users[0].try(:salary)   %>
+                <%= link_to new_instructor_path do %>
+                   <i class="fas fa-plus-circle"></i>
+                <% end %>
+            <% else %>
+               <%= link_to new_student_path do %>
+                 <i class="fas fa-plus-circle"></i>
+               <% end %>
+           <% end %>
                 </div>
               </div>
 
@@ -29,39 +50,47 @@
           </div>
         </div>
 
-        <div class="row m-5">
+        <div class="row m-3 mt-5">
           <div class="col-lg-12">
-            <div class="bx-color bx-xlg">
-
-                <div class="row p-4">
-
-                  <div class="col-lg-4 col-sm-12">
-                   <div class="user-bx">
-                     <div class="col-lg-3">
-                        <i style="color:#fefef9" class="fas fa-user-circle fa-3x"></i>
-                     </div>
-                     <div class="col-lg-9">
-Stuffffff
-                     </div>
-                   </div>
+              <div class="container bx-color bx-xlg py-3">
+                <div class="row">
+                 <% users.each do |user| %>
+                    <div class="col-lg-4">
+                      <div class="card">
+                        <div class="card-block">
+                          <div class="row m-0">
+                            <div class="card-title col-lg-3 justify-content-center align-self-center">
+                                <i style="color:black" class="fas fa-user-circle fa-3x"></i>
+                             </div>
+                             <div class="p-2 col-lg-9">
+                                <span class="card-title"> <%=user.first_name + ' ' + user.last_name%></span><br>
+                                <hr class="m-0">
+                                <span class="card-subtitle text-muted">Date Of Birth:  </span>
+                                <span class="card-text"><%= user.dob %></span><Br>
+                                <span class="card-subtitle text-muted">Education:</span>
+                                <span class="card-text"><%= user.education %></span><BR>
+                                <% if user.try(:salary)   %>
+                                <span class="card-subtitle text-muted">Salary:</span>
+                                <span class="card-text"><%= user.salary %></span><br>
+                                <% else %>
+                                <span class="card-subtitle text-muted">Enrolled since: </span>
+                                <span class="card-text"><%= user.created_at %></span><br>
+                                <% end %>
+                             </div>
+                          </div>
+                        </div>
+                      </div>
                   </div>
-
-                  <div class="col-lg-4 col-sm-12">
-                     <i class="fas fa-user-circle"></i>
-                  </div>
-
-                  <div class="col-lg-4 col-sm-12">
-                     <i class="fas fa-user-circle"></i>
-                  </div>
-
-                </div>
-
-
-            </div>
+                   <% end %>
+              </div>
           </div>
-        </div>
+     </div>
+   </div>
 
 
+
+
+<!-- container fluid  -->
       </div>
-
+<!-- content  -->
     </div>

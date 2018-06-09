@@ -24,7 +24,7 @@
 
 
  //colors
- $white: #fff;
+
  $black-shadow: rgba(0, 0, 0, 0.1);
  $sidebar-background: #253e47;
  $whiteish: #ebebeb;
@@ -54,7 +54,7 @@
  }
  .navbar {
  	padding: 15px 10px;
- 	background: $white;
+ 	background: white;
  	border: none;
  	border-radius: 0;
  	margin-bottom: 40px;
@@ -73,14 +73,14 @@
  	min-width: 250px;
  	max-width: 250px;
  	background: $sidebar-background;
- 	color: $white;
+ 	color: white;
  	transition: all 0.3s;
  	font-family: $Mont-Heavy;
  	&.active {
  		margin-left: -250px;
  	}
  	ul {
- 		color: $white;
+ 		color: white;
  		padding: 10px;
  		&.components {
  			padding: 10px 0;
@@ -95,11 +95,11 @@
  				&:hover {
  					color: $gray
       ;
- 					background: $white;
+ 					background: white;
  				}
  			}
  			&.active > a {
- 				color: $white;
+ 				color: white;
  				border-right: 6px solid $black;
  			}
  		}
@@ -111,13 +111,13 @@
  .xlg-font {
  	font-family: $Mont-Light;
  	font-size: 1.8vw;
- 	color: $white;
+ 	color: white;
  	letter-spacing: 5px;
  }
  .lg-font {
  	font-family: $Mont-Light;
  	font-size: 1.6vw;
- 	color: $white;
+ 	color: white;
  	letter-spacing: 3px;
  }
  .md-font-black {
@@ -129,18 +129,27 @@
  	font-family: $Mont-Heavy;
  	font-size: 1.1vw;
  	letter-spacing: 4px;
- 	color: $white;
+ 	color: white;
  }
- .sm-font {
- 	font-size: .7vw;
- 	letter-spacing: 4px;
- }
+
  .md-open-sans {
  	font-family: $OpenSans;
  	font-size: 1.1vw;
- 	color: $white;
+ 	color: white;
  	letter-spacing: 6px;
  }
+
+ .xsm-gray {
+   font-family: $Mont-Light;
+   font-size: .7vw;
+   color: gray;
+ }
+ .sm-black-OpenSans {
+   font-size: .8vw;
+   color: $black;
+   font-family: $OpenSans;
+ }
+
  #content {
  	padding: 20px;
  	min-height: 100vh;
@@ -172,14 +181,24 @@
  	font-size: 0.9em !important;
  	padding-left: 30px !important;
  	background: $color_moody_blue;
+
  }
 
+ // user details cards
+
 .user-bx {
-  border: 2px solid #FFFFFF;
-  box-shadow: 1px 2px 4px 2px rgba(0,0,0,0.50);
-  border-radius: 10px;
-  height: 70px
+
+  box-shadow: 1px 2px 3px 1px rgba(0, 0, 0, 0.5);
+  border-radius: 1px;
+  height: 100px;
+  background-color:white;
 }
+
+.card:hover {
+  box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+
  @media(max-width: 768px) {
  	#sidebar {
  		margin-left: -250px;
