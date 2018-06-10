@@ -63,7 +63,7 @@
             <div class="row">
              <% types.each do |type| %>
                 <div class="col-lg-6">
-            <% if types[0].try(:hours) %>
+            <% if types == @courses %>
               <%= link_to cohort_path(type) do  %>
                   <div class="card">
                     <div class="card-block">
@@ -73,7 +73,7 @@
                          </div>
                          <div class="p-2 col-lg-9">
                              <span class="card-title"> <%=type.name %></span>
-                    <% if types[0].try(:hours)%>
+                    <% if type == @courses %>
                             <%= link_to course_path(type), method: "DELETE", data: {confirm: "Are you sure you want to delete this type?" } do %>
                                <i class="fas fa-trash float-right m-1"></i>
                             <% end %>
@@ -90,7 +90,7 @@
                    <%end%>
 
                             <hr class="m-0">
-                            <% if types[0].try(:hours)   %>
+                            <% if types = @courses  %>
                             <span class="card-subtitle text-muted">Hours</span>
                             <span class="card-text"><%= type.hours %></span><br>
                             <% else %>
