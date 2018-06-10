@@ -35,7 +35,7 @@
              <% end %>
                     </div>
                     <div class="text-center">
-                    <%=  types.length %>
+                    <%=  types.name %>
                     </div>
                   </div>
 
@@ -63,7 +63,8 @@
             <div class="row">
              <% types.each do |type| %>
                 <div class="col-lg-6">
-
+            <% if types[0].try(:hours) %>
+              <%= link_to cohort_path(type) do  %>
                   <div class="card">
                     <div class="card-block">
                       <div class="row m-0">
@@ -106,6 +107,8 @@
                       </div>
                     </div>
                   </div>
+                  <% end %>
+                  <% end %>
                </div>
               <% end %>
           </div>
