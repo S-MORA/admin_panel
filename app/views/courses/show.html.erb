@@ -16,7 +16,7 @@
       <div class="col-lg-12">
         <div class="bx-color bx-sm">
             <div class="row">
-              
+
                   <div style="display: flex; justify-content:center; align-items:center" class="col-md-2">
                     <%= image_tag image_path('instructor-icon.png'), :class => 'icon-width-lg' %>
                   </div>
@@ -42,11 +42,11 @@
 
     <div class="row m-3 mt-5">
       <div class="col-lg-12">
-          <div class="container bx-color bx-xlg py-3">
+          <div class="container-fluid bx-color bx-xlg py-3">
             <div class="row">
              <% @course.cohorts.each do |cohort| %>
                 <div class="col-lg-6">
-                  <div class="card">
+                  <div class="card my-2">
                     <div class="card-block">
                       <div class="row m-0">
 
@@ -64,8 +64,6 @@
                             <%= link_to edit_cohort_path(cohort) do %>
                                <i class="fas fa-edit float-right m-1"></i>
                              <% end %>
-
-
                             <hr class="m-0">
                             <span class="card-subtitle text-muted">Course: </span>
                             <span class="card-text"><%= cohort.course.name %></span><br>
@@ -75,14 +73,13 @@
                             <span class="card-text"><%= cohort.start_date %></span><br>
                             <span class="card-subtitle text-muted">EndDate: </span>
                             <span class="card-text"><%= cohort.end_date %></span>
-                            <% end %>
                          </div>
                       </div>
                     </div>
                   </div>
 
                </div>
-
+<% end %>
 
           </div>
 

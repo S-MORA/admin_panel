@@ -1,25 +1,25 @@
 <%= form_for @cohort do |c| %>
- <div>
+ <div class="field">
     <%= c.label :name %>
     <%= c.text_field :name %>
  </div>
 
 
- <div>
+ <div class="field last">
     <%= c.label :start_date %>
     <%= c.date_field  :start_date %>
  </div>
 
- <div>
+ <div class="field">
     <%= c.label :end_date %>
     <%= c.date_field :end_date %>
  </div>
- <div>
+ <div class="field last">
     <%= c.label :instructor_id %>
     <%= c.select :instructor_id, options_for_select(@instructors.map { |i| [i.first_name + ' ' + i.last_name, i.id] })%>
 
  </div>
- <div>
+ <div class="field">
     <%= c.label :course_id %>
     <%= c.select :course_id, options_for_select(@courses.map { |c| [c.name, c.id] })%>
  </div>

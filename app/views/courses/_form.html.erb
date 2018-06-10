@@ -1,13 +1,13 @@
 <%= form_for @course do |c| %>
- <div>
+ <div class="field">
     <%= c.label :name %>
     <%= c.text_field :name %>
  </div>
 
- <div>
+ <div class="field last">
     <%= c.label :hours %>
     <%= c.number_field :hours %>
- </div>
+ </div class="field">
 
  <div>
     <%= c.submit %>

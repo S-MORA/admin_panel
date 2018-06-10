@@ -1,14 +1,18 @@
 
     <div id="content">
-
       <div class="container-fluid">
         <div class="row mx-3">
           <div class="col-lg-12">
             <div class="xlg-font underline d-inline">
-
-              Instructor's Area
-
-
+        <% if users == @cohorts %>
+              Cohort's Area
+        <% elsif users == @students %>
+            Student's Area
+        <% elsif users == @courses %>
+             Course's Area
+        <% else %>
+             Instructor's area
+        <% end %>
             </div>
             <div class="md-font-white float-right">
               Logout
@@ -18,7 +22,6 @@
 
 
         <div class="row mx-3 mt-4">
-
           <div class="col-lg-12">
             <div class="bx-color bx-sm">
 
@@ -28,7 +31,15 @@
                       </div>
                       <div class="col-md-2 md-font-white mt-3">
                         <div class="text-center">
-                  Instructors
+                          <% if users == @instructors %>
+                                Instructor
+                          <% elsif users == @students %>
+                                Student
+                          <% elsif users == @courses %>
+                               Course
+                          <% else %>
+                               Cohort
+                          <% end %>
                         </div>
                         <div class="text-center">
 
@@ -58,15 +69,15 @@
 
                                <%= render 'form' %>
 
-                             </div>
-                          </div>
+                           </div>
                         </div>
                       </div>
-                   </div>
-              </div>
-          </div>
-      </div>
-   </div>
+                    </div>
+                  </div>
+               </div>
+            </div>
+        </div>
+     </div>
 
 
 
