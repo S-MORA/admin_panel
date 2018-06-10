@@ -27,12 +27,16 @@
                       <div style="display: flex; justify-content:center; align-items:center" class="col-md-2">
                         <%= image_tag image_path('instructor-icon.png'), :class => 'icon-width-lg' %>
                       </div>
-                      <div class="d-inline-block col-md-2">
-                        <div class="">
-                          Instructors
+                      <div class="col-md-2 md-font-white mt-3">
+                        <div class="text-center">
+                  <% if users[0].try(:salary)   %>
+                  Instructors
+                  <% else %>
+                     Students
+                 <% end %>
                         </div>
-                        <div class="">
-                          13
+                        <div class="text-center">
+                        <%=  users.length %>
                         </div>
                       </div>
 

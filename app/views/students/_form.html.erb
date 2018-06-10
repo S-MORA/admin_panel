@@ -1,36 +1,39 @@
-<%= form_for @student do |s| %>
- <div>
-    <%= s.label :first_name %>
-    <%= s.text_field :first_name %>
- </div>
 
- <div>
-    <%= s.label :last_name %>
-    <%= s.text_field :last_name %>
- </div>
 
- <div>
-    <%= s.label :dob %>
-    <%= s.date_field :dob %>
- </div>
+  <%= form_for @student do |s| %>
 
- <div>
+  <div class="field">
+     <%= s.label :first_name %>
+     <%= s.text_field :first_name %>
+  </div>
 
-    <%= s.label :education, "High School" %>
-    <%= s.radio_button :education, "High School" %>
+  <div class="field last">
+     <%= s.label :last_name %>
+     <%= s.text_field :last_name %>
+  </div>
 
-    <%= s.label :education, "Bachelor's" %>
-    <%= s.radio_button :education, "Bachelor's"%>
+  <div class="field">
+     <%= s.label :dob %>
+     <%= s.date_field :dob %>
+  </div>
 
-    <%= s.label :education, "Master's" %>
-    <%= s.radio_button :education, "Master's"%>
+  <div class="field last radio-inline">
 
-    <%= s.label :education, "PhD" %>
-    <%= s.radio_button :education, "PhD"%>
+     <%= s.label :education, "High School", :class=> "radio-inline" %>
+     <%= s.radio_button :education, "High School"%>
 
- </div>
+     <%= s.label :education, "Bachelor's", :class=> "radio-inline" %>
+     <%= s.radio_button :education, "Bachelor's"%>
 
- <div>
-    <%= s.submit %>
- </div>
-<% end %>
+     <%= s.label :education, "Master's", :class=> "radio-inline" %>
+     <%= s.radio_button :education, "Master's"%>
+
+     <%= s.label :education, "PhD", :class=> "radio-inline" %>
+     <%= s.radio_button :education, "PhD"%>
+
+  </div>
+
+  <div >
+     <%= s.submit :class=> "link wipe lft-rgt-wipe"%>
+  </div>
+ <% end %>
