@@ -42,8 +42,14 @@
 
 // forms
 
-
-
+.fit-content {
+  width: fit-content
+}
+.row-center-100 {
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
   .field {
     display: block;
     border: 1px solid $gray;
@@ -223,14 +229,14 @@ $easing: ease-in-out;
  	height: 325px;
  }
  .bx-xlg {
- 	height: 475px;
+ 	height: 100%;
  }
  .icon-width {
  	width: 40px;
  }
 
  .icon-width-lg {
-   max-width: 50%;;
+   max-width: 100%;;
  }
 
  ul ul a {
@@ -258,7 +264,7 @@ $easing: ease-in-out;
 // button hover
 
 
-// 
+//
 // .link {
 // 	// Text formatting of each button
 // 	text-transform: uppercase;

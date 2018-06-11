@@ -4,7 +4,7 @@
     <title>RailsAdminPanel</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
   </head>
@@ -14,10 +14,10 @@
       <!-- Sidebar Holder -->
       <nav id="sidebar">
         <div class="sidebar-header m-4">
-          <div style="width: 100px" class="mx-auto">
+          <div class="fit-content mx-auto">
             <%= image_tag image_path('logo.png')%>
           </div>
-          <div style="width: 140px" class="mx-auto">
+          <div class="fit-content mx-auto m-3">
             <h3 class="md-open-sans m-2"><strong>GRADE</strong>LINK</h3>
           </div>
 
@@ -25,19 +25,20 @@
 
 
         <ul class="list-unstyled components">
-          <div style="color:#fefef9; width: 50px" class="mx-auto">
+          <div style="color:#fefef9" class="fit-content mx-auto">
             <i class="fas fa-user-circle mx-auto fa-3x"></i>
           </div>
 
-          <div style="width: 130px" class="mx-auto">
+          <div class="fit-content mx-auto">
             <div class="md-font-white">User Name</div>
           </div>
-          <div style="width: 90px" class="mx-auto">
+          <div  class="fit-content mx-auto">
             <div class="xsm-gray">User Type</div>
           </div>
+
+
           <div class="container-fluid">
             <div class="row">
-
               <div class="col-lg-12 pr-0">
                 <li class="active">
 

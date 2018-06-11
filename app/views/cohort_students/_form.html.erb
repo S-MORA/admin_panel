@@ -9,6 +9,6 @@
     <%= c.select :student_id, options_for_select(@students.map { |s| [s.first_name + ' ' + s.last_name, s.id] })%>
  </div>
  <div>
-  <%=   c.submit %>
+  <%=   c.submit "Add Student to Cohort"  %>
  </div>
 <% end %>

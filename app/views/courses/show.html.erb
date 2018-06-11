@@ -25,7 +25,7 @@
               Cohorts
                     </div>
                     <div class="text-center">
-                  Num
+              <%= @course.cohorts.length %>
                     </div>
                   </div>
 
@@ -64,6 +64,9 @@
                             <%= link_to edit_cohort_path(cohort) do %>
                                <i class="fas fa-edit float-right m-1"></i>
                              <% end %>
+                             <%= link_to new_cohort_student_path do %>
+                                 <i class="fas fa-plus float-right m-1"></i>
+                             <% end %>
                             <hr class="m-0">
                             <span class="card-subtitle text-muted">Course: </span>
                             <span class="card-text"><%= cohort.course.name %></span><br>
@@ -71,7 +74,7 @@
                             <span class="card-text"><%= cohort.instructor.first_name + ' ' + cohort.instructor.last_name %></span><br>
                             <span class="card-subtitle text-muted">Start Date: </span>
                             <span class="card-text"><%= cohort.start_date %></span><br>
-                            <span class="card-subtitle text-muted">EndDate: </span>
+                            <span class="card-subtitle text-muted">End Date: </span>
                             <span class="card-text"><%= cohort.end_date %></span>
                          </div>
                       </div>

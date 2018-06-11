@@ -1,7 +1,6 @@
+<div id="content">
+    <div class="container-fluid">
 
-    <div id="content">
-
-      <div class="container-fluid">
         <div class="row mx-3">
           <div class="col-lg-12">
             <div class="xlg-font underline d-inline">
@@ -19,29 +18,28 @@
 
 
         <div class="row mx-3 mt-4">
-
           <div class="col-lg-12">
             <div class="bx-color bx-sm">
 
-                <div class="row">
-                      <div style="display: flex; justify-content:center; align-items:center" class="col-md-2">
+                <div class="row row-center-100">
+                      <div class="px-5 col-md-2">
                         <%= image_tag image_path('instructor-icon.png'), :class => 'icon-width-lg' %>
                       </div>
-                      <div class="col-md-2 md-font-white mt-3">
+                      <div class="my-auto col-md-2 md-font-white">
                         <div class="text-center">
                   <% if users == @instructors   %>
-                  Instructors
+                      Instructors
                   <% else %>
-                     Students
+                       Students
                  <% end %>
                         </div>
-                        <div class="text-center">
+                      <div class="text-center">
                         <%=  users.length %>
                         </div>
                       </div>
 
-                      <div style="display: flex; justify-content:center; align-items:center" class="col-md-1 offset-md-7">
-                    <% if users == @instructors  %>
+                      <div  class="my-auto px-3 col-md-1 offset-md-7">
+                    <% if users == @instructors %>
                       <%= link_to new_instructor_path do %>
                          <i class="fas fa-plus-circle fa-3x icon-width-lg"></i>
                       <% end %>
@@ -58,9 +56,10 @@
           </div>
         </div>
 
+
         <div class="row m-3 mt-5">
           <div class="col-lg-12">
-              <div class="container bx-color bx-xlg py-3">
+              <div class="container-fluid bx-color bx-xlg py-3">
                 <div class="row">
                  <% users.each do |user| %>
                     <div class="col-lg-4 my-2">
@@ -68,7 +67,7 @@
                       <div class="card">
                         <div class="card-block">
                           <div class="row m-0">
-                            <div class="card-title col-lg-3 justify-content-center align-self-center">
+                            <div class="card-title col-lg-3 p-1 justify-content-center align-self-center">
                                 <i style="color:black" class="fas fa-user-circle fa-3x"></i>
                              </div>
                              <div class="p-2 col-lg-9">

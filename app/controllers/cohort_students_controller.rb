@@ -11,9 +11,9 @@ class CohortStudentsController < ApplicationController
     @cohort_student = CohortStudent.find(params[:id])
   end
   def create
-
     CohortStudent.create(cohort_student_params)
-    redirect_to cohort_students_path
+
+    redirect_to cohort_path
   end
   def edit
     @cohort_student = CohortStudent.find(params[:id])
@@ -21,7 +21,7 @@ class CohortStudentsController < ApplicationController
   def update
     cohort_student = CohortStudent.find(params[:id])
     cohort_student.update(cohort_student_params)
-    redirect_to cohort_students_path
+    redirect_to cohorts_path
   end
   def destroy
     CohortStudent.destroy(params[:id])
