@@ -1,24 +1,22 @@
-# README
+# Administrative Dashboard for a fictitious School
+#### Current Project/Still in Beta
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+----
+## Environment
 
-Things you may want to cover:
+Ruby on Rails   
+jQuery     
+Bootstrap   
+PostgreSQL/Active Record  
 
-* Ruby version
 
-* System dependencies
+Designed User Interface in Sketch
 
-* Configuration
+----
+## How To Use
+Create, read, update, & delete students, instructors, courses, cohorts, and students enrollment.
 
-* Database creation
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Post MVP
+----
+Yet to come: User authentication, D3 & file upload to AWS S3.
