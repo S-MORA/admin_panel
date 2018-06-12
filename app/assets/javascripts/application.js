@@ -14,3 +14,15 @@
 //= require jquery/dist/jquery
 //= require toastr/build/toastr.min.js
 //= require_tree .
+
+$(document).ready(function() {
+  $(window).resize(function() {
+    if ($(window).width() <= 770) {
+      $("#sideBarSection").toggleClass("d-none");
+      $("#sidebarCollapse").on("click", function() {
+        $("#sidebar").toggleClass("active");
+        $(this).toggleClass("active");
+      });
+    }
+  });
+})

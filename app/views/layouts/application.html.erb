@@ -50,19 +50,27 @@
                 </li>
               </div>
               <div class="col-lg-12 pr-0">
-                <li class="">
-                  <a href="#" class="my-3">
+                <li>
+                  <%= link_to instructors_path, class: "my-3" do %>
                     <i class="fas fa-users ml-4"></i>
-                   <span class="float-right mr-4">Users</span>
-                  </a>
+                   <span class="float-right mr-4">Instructors</span>
+                  <% end %>
                 </li>
               </div>
               <div class="col-lg-12 pr-0">
-                <li class="">
-                  <a href="#" class="my-3">
-                    <i class="fas fa-cog ml-4"></i>
-                   <span class="float-right mr-4">Account</span>
-                  </a>
+                <li>
+                  <%= link_to students_path, class: "my-3" do %>
+                    <i class="fas fa-users ml-4"></i>
+                   <span class="float-right mr-4">Students</span>
+                  <% end %>
+                </li>
+              </div>
+              <div class="col-lg-12 pr-0">
+                <li>
+                  <%= link_to courses_path, class: "my-3" do %>
+                    <i class="fas fa-book ml-4"></i>
+                   <span class="float-right mr-4">Courses</span>
+                  <% end %>
                 </li>
               </div>
             </div>
@@ -70,6 +78,11 @@
 
         </ul>
       </nav>
+      <div id="sideBarSection" class="d-none" style="background-color: #1d3037">
+        <button style="color:#7db6ab" type="button" id="sidebarCollapse" class="btn navbar-btn m-2">
+          <i class="fas fa-bars"></i>
+          </button>
+      </div>
 
     <%= yield %>
   </body>

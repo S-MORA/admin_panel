@@ -103,15 +103,6 @@
  	}
  }
 
- $duration: .20;
-$easing: ease-in-out;
-
-
-
-
-
-
-
  .navbar {
  	padding: 15px 10px;
  	background: white;
@@ -258,70 +249,6 @@ $easing: ease-in-out;
 
 
 // button hover
-
-
-//
-// .link {
-// 	// Text formatting of each button
-// 	text-transform: uppercase;
-//
-// 	color: black;
-// 	letter-spacing: 0.1em;
-// 	font-size: 0.8rem;
-//
-// 	// Size formatting for each button
-// 	margin: 10px;
-// 	padding: 10px;
-// 	position: relative;
-//
-// 	// Setting a border around each button
-// 	border: 2px solid black;
-// 	border-radius: 4px;
-// 	overflow: hidden;
-//
-// }
-// .wipe {
-// 	// Setting up the transition
-// 	transition: color 0.3s;
-//
-// 	&:after {
-// 		// Setting size of wipe layer to 100% of the buttons size, so that changing the text within the button won't break the animation instead of using absolute numbers
-// 		width: 100%;
-// 		height: 100%;
-//
-// 		// Setting display type and background-color of the button
-// 		display: block;
-// 		background-color: black;
-//
-// 		// Setting the position of the wipe layer so that it covers the whole button AFTER the translation animtaion is finished
-// 		content: " ";
-// 		position: absolute;
-// 		top: 0;
-// 		left: 0;
-//
-// 		// Setting the transition and layer index for the wipe layer
-// 		transition: transform 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
-// 		z-index: -1;
-// }
-// 	&:hover{
-// 		// Sets the color for the text within the button so you can still read it
-// 		color: white;
-//  }
-// }
-//
-// // Left to right wipe animation
-// .lft-rgt-wipe {
-// 	&:after {
-// 		// Pushes the wipe layer out of the button so it won't be seen
-// 		transform: translateX(-100%);
-// }
-// 	&:hover {
-// 		&:after {
-// 			// This is the position, after the hover animation is finished
-// 			transform: translateX(0%);
-//  }
-//  }
-// }
 
 
  @media(max-width: 768px) {
