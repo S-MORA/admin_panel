@@ -91,20 +91,20 @@
 
  a {
  	text-decoration: none;
+  color: $under-line-blue;
 
  	&:hover {
  		text-decoration: none;
- 		transition: all 0.3s;
+    color: $gray;
  	}
  	&:focus {
  		text-decoration: none;
- 		transition: all 0.3s;
+
  	}
  }
 
  $duration: .20;
 $easing: ease-in-out;
-
 
 
 
@@ -219,12 +219,8 @@ $easing: ease-in-out;
  	background: $primary-box;
  	box-shadow: 0 2px 9px 0 $gray;
  }
- .bx-sm {
- 	height: 80px;
- }
- .bx-md {
- 	height: 150px;
- }
+
+
  .bx-lg {
  	height: 325px;
  }

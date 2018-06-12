@@ -14,11 +14,11 @@
 
     <div class="row mx-3 mt-4">
       <div class="col-lg-12">
-        <div class="bx-color bx-sm">
+        <div class="bx-color p-3">
             <div class="row">
 
                   <div style="display: flex; justify-content:center; align-items:center" class="col-md-2">
-                    <%= image_tag image_path('instructor-icon.png'), :class => 'icon-width-lg' %>
+                    <%= image_tag image_path('cohort-icon.png'), :class => 'icon-width-lg' %>
                   </div>
                   <div class="col-md-2 md-font-white mt-3">
                     <div class="text-center">
@@ -65,7 +65,8 @@
                                <i class="fas fa-edit float-right m-1"></i>
                              <% end %>
                              <%= link_to new_cohort_student_path do %>
-                                 <i class="fas fa-plus float-right m-1"></i>
+
+                                 <i class="fas fa-plus float-right m-1"> Add Student</i>
                              <% end %>
                             <hr class="m-0">
                             <span class="card-subtitle text-muted">Course: </span>

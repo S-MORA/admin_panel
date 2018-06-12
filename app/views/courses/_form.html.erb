@@ -1,15 +1,15 @@
 <%= form_for @course do |c| %>
- <div class="field">
+ <div class="field last">
     <%= c.label :name %>
     <%= c.text_field :name %>
  </div>
 
- <div class="field last">
+ <div class="field">
     <%= c.label :hours %>
     <%= c.number_field :hours %>
- </div class="field">
+ </div>
 
- <div>
+ <div class="field">
     <%= c.submit %>
  </div>
 

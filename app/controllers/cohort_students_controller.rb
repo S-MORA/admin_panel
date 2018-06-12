@@ -1,14 +1,8 @@
 class CohortStudentsController < ApplicationController
-  def index
-    @cohort_students = CohortStudent.all.order(:last_name)
-  end
   def new
     @cohorts = Cohort.all
     @students = Student.all
     @cohort_student = CohortStudent.new
-  end
-  def show
-    @cohort_student = CohortStudent.find(params[:id])
   end
   def create
     CohortStudent.create(cohort_student_params)

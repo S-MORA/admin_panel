@@ -14,17 +14,17 @@
     <%= c.label :end_date %>
     <%= c.date_field :end_date %>
  </div>
- <div class="field last">
+ <div class="field">
     <%= c.label :instructor_id %>
     <%= c.select :instructor_id, options_for_select(@instructors.map { |i| [i.first_name + ' ' + i.last_name, i.id] })%>
 
  </div>
- <div class="field">
+ <div class="field last">
     <%= c.label :course_id %>
     <%= c.select :course_id, options_for_select(@courses.map { |c| [c.name, c.id] })%>
  </div>
 
- <div>
+ <div class="field">
     <%= c.submit %>
  </div>
 
