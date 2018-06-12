@@ -223,7 +223,7 @@
  }
 
  .icon-width-lg {
-   max-width: 60px;
+   width: 60px;
  }
 
  ul ul a {
@@ -258,4 +258,7 @@
  			margin-left: 0;
  		}
  	}
+  .sideBarSection {
+    display: inline-block !important
+  }
  }
