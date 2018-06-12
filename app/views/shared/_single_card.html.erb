@@ -29,18 +29,27 @@
 
                 <div class="row">
                       <div style="display: flex; justify-content:center; align-items:center" class="col-md-2">
+                        <% if users == @cohorts %>
+                        <%= image_tag image_path('cohort-icon.png'), :class => 'icon-width-lg' %>
+                        <% elsif users == @students %>
+                        <%= image_tag image_path('student-icon.png'), :class => 'icon-width-lg' %>
+                        <% elsif users = @courses %>
+                        <%= image_tag image_path('course-icon.png'), :class => 'icon-width-lg' %>
+                        <% else %>
                         <%= image_tag image_path('instructor-icon.png'), :class => 'icon-width-lg' %>
+                        <% end %>
+
                       </div>
                       <div class="col-md-2 md-font-white mt-3">
                         <div class="text-center">
-                          <% if users == @instructors %>
-                                Instructor
+                          <% if users == @cohorts %>
+                                Cohorts
                           <% elsif users == @students %>
-                                Student
+                                Students
                           <% elsif users == @courses %>
-                               Course
+                               Courses
                           <% else %>
-                               Cohort
+                               Instructors
                           <% end %>
                         </div>
                         <div class="text-center">
@@ -65,7 +74,7 @@
                         <div class="card-block">
                           <div class="row m-0">
                             <div class="card-title col-lg-3 justify-content-center align-self-center">
-                              
+
                                 <i style="color:black" class="fas fa-user-circle fa-4x"></i>
                              </div>
                              <div class="p-2 col-lg-9">

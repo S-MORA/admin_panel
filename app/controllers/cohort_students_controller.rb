@@ -1,6 +1,6 @@
 class CohortStudentsController < ApplicationController
   def index
-    @cohort_students = CohortStudent.all
+    @cohort_students = CohortStudent.all.order(:last_name)
   end
   def new
     @cohorts = Cohort.all
@@ -13,7 +13,7 @@ class CohortStudentsController < ApplicationController
   def create
     CohortStudent.create(cohort_student_params)
 
-    redirect_to cohort_path
+    redirect_to cohort_path(cohort_student_params[:cohort_id])
   end
   def edit
     @cohort_student = CohortStudent.find(params[:id])
@@ -21,11 +21,11 @@ class CohortStudentsController < ApplicationController
   def update
     cohort_student = CohortStudent.find(params[:id])
     cohort_student.update(cohort_student_params)
-    redirect_to cohorts_path
+    redirect_to cohort_path(cohort_student_params[:cohort_id])
   end
   def destroy
     CohortStudent.destroy(params[:id])
-    redirect_to cohort_students_path
+    redirect_to cohort_path(cohort_student_params[:cohort_id])
   end
 private
   def cohort_student_params

@@ -55,10 +55,10 @@
                              <div class="p-2 col-lg-9">
                                  <span class="card-title"> <%=student.first_name + ' ' + student.last_name%></span>
 
-                                <%= link_to student_path(student), method: "DELETE", data: {confirm: "Are you sure you want to delete this student?"} do %>
+                                <%= link_to cohort_student_path(student), method: "DELETE", data: {confirm: "Are you sure you want to delete this student from the cohort?"} do %>
                                   <i class="fas fa-trash float-right m-1"></i>
                                 <% end %>
-                               <%= link_to edit_student_path(student) do %>
+                               <%= link_to edit_cohort_student_path(student) do %>
                                   <i class="fas fa-edit float-right m-1"></i>
                               <%end%>
 

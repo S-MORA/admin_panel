@@ -3,5 +3,7 @@ class DashboardController < ApplicationController
       @students = Student.all
       @instructors = Instructor.all
       @courses = Course.all
+      cohorts = Cohort.all
+      @newest_cohorts = cohorts.reverse
     end
 end
