@@ -36,10 +36,11 @@
  $gray: rgba(45, 44, 44, 0.50);
 
  //fonts
- $Mont-Heavy: Mont-HeavyDEMO;
- $Mont-Light: Mont-ExtraLightDEMO;
- $OpenSans: OpenSans;
 
+$OpenSans: 'Open Sans', sans-serif;;
+
+$primary-font: 'Raleway', sans-serif;
+$secondary-font: 'Roboto', sans-serif;
 // forms
 
 .fit-content {
@@ -126,7 +127,7 @@
  	background: $sidebar-background;
  	color: white;
  	transition: all 0.3s;
- 	font-family: $Mont-Heavy;
+ 	font-family: $secondary-font;
  	&.active {
  		margin-left: -250px;
  	}
@@ -147,10 +148,6 @@
  					background: white;
  				}
  			}
- 			&.active > a {
- 				color: white;
- 				border-right: 6px solid $black;
- 			}
  		}
  	}
  }
@@ -158,13 +155,13 @@
  	text-decoration: underline $under-line-blue solid;
  }
  .xlg-font {
- 	font-family: $Mont-Light;
+ 	font-family: $primary-font;
  	font-size: 1.8vw;
  	color: white;
  	letter-spacing: 5px;
  }
  .lg-font {
- 	font-family: $Mont-Light;
+ 	font-family: $primary-font;
  	font-size: 2vw;
  	color: white;
  	letter-spacing: 3px;
@@ -175,7 +172,7 @@
  	color: $black;
  }
  .md-font-white {
- 	font-family: $Mont-Heavy;
+ 	font-family: $secondary-font;
  	font-size: 1.1vw;
  	letter-spacing: 4px;
  	color: white;
@@ -189,7 +186,7 @@
  }
 
  .xsm-gray {
-   font-family: $Mont-Light;
+   font-family: $primary-font;
    font-size: .7vw;
    color: gray;
  }
@@ -222,6 +219,11 @@
 
  .icon-width-lg {
    width: 60px;
+ }
+
+ .icon-width-xlg{
+   width: 120px
+   
  }
 
  ul ul a {

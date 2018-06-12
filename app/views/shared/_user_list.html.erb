@@ -20,7 +20,7 @@
         <div class="row mx-3 mt-4">
           <div class="col-lg-12">
             <div class="bx-color p-3">
-                <div class="row row-center-100 no-gutters">
+                <div class="row row-center-100">
                       <div class="col-4">
                         <% if users == @instructors %>
                         <%= image_tag image_path('instructor-icon.png'), :class => 'icon-width-lg' %>
@@ -40,7 +40,7 @@
                         </div>
                       </div>
 
-                      <div  class="col-4">
+                      <div class="col-4">
                     <% if users == @instructors %>
                       <%= link_to new_instructor_path do %>
                          <i class="fas fa-plus-circle fa-2x float-right"></i>
@@ -61,7 +61,7 @@
 
         <div class="row m-3 mt-5">
           <div class="col-lg-12">
-              <div class="container-fluid bx-color bx-xlg py-3">
+              <div class="container-fluid bx-color py-3">
                 <div class="row">
                  <% users.each do |user| %>
                     <div class="col-lg-4 my-2">
@@ -70,7 +70,11 @@
                         <div class="card-block">
                           <div class="row m-0">
                             <div class="card-title col-lg-3 p-1 justify-content-center align-self-center">
-                                <i style="color:black" class="fas fa-user-circle fa-3x"></i>
+                              <% if users == @instructors %>
+                              <%= image_tag image_path('instructor-icon.png'), :class => 'icon-width' %>
+                              <% else %>
+                              <%= image_tag image_path('student-icon.png'), :class => 'icon-width' %>
+                              <% end %>
                              </div>
                              <div class="p-2 col-lg-9">
                                  <span class="card-title"> <%=user.first_name + ' ' + user.last_name%></span>

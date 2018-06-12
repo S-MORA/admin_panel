@@ -11,7 +11,7 @@ class CohortsController < ApplicationController
     @instructors = Instructor.all
     @courses = Course.all
     Cohort.create(cohort_params)
-    redirect_to cohorts_path
+    redirect_to course_path(cohort_params[:course_id])
   end
   def edit
     @cohort = Cohort.find(params[:id])

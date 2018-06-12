@@ -69,8 +69,8 @@
       </div>
 
     </div>
-
-    <div class="row m-5">
+<!-- Extra features for later :) -->
+    <!-- <div class="row m-5">
 
       <div class="col-lg-7 mb-1">
         <div class="bx-color bx-lg">
@@ -87,8 +87,7 @@
           </div>
         </div>
       </div>
-
-    </div>
+    </div> -->
 
     <div class="row m-5">
       <div class="col-lg-12">
@@ -98,13 +97,13 @@
             Latest Cohorts
           </div>
           <div class="row">
-           <% @newest_cohorts.first(3).each do |cohort| %>
-              <div class="col-lg-4 my-2">
+           <% @newest_cohorts.first(6).each do |cohort| %>
+              <div class="col-lg-4 my-1">
                 <div class="card">
                   <div class="card-block">
                     <div class="row m-0">
-                      <div class="card-title col-lg-3 p-1 justify-content-center align-self-center">
-                          <i style="color:black" class="fas fa-user-circle fa-3x"></i>
+                      <div class="card-title col-lg-3 align-self-center">
+                          <%= image_tag image_path('cohort-icon.png'), :class => 'icon-width' %>
                        </div>
                        <div class="p-2 col-lg-9">
                          <%= link_to course_path(cohort.course) do %>
@@ -123,8 +122,12 @@
                           <span class="card-text"><%= cohort.instructor.first_name + ' ' + cohort.instructor.last_name %></span><BR>
                           <span class="card-subtitle text-muted">Students:  </span>
                           <span class="card-text"><%= cohort.students.length %></span><Br>
+                            <%date = cohort.start_date %>
+                            <%m = date.strftime("%m")%>
+                            <%d = date.strftime("%d")%>
+                            <%y = date.strftime("%d")%>
                           <span class="card-subtitle text-muted">Start Date: </span>
-                          <span class="card-text"><%= cohort.start_date %></span><br>
+                          <span class="card-text"><%=m%>-<%=d%>-<%=y%></span><br>
 
                        </div>
                     </div>

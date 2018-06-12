@@ -73,9 +73,16 @@
                       <div class="card">
                         <div class="card-block">
                           <div class="row m-0">
-                            <div class="card-title col-lg-3 justify-content-center align-self-center">
-
-                                <i style="color:black" class="fas fa-user-circle fa-4x"></i>
+                            <div class="card-title col-lg-3 align-self-center">
+                              <% if users == @cohorts %>
+                              <%= image_tag image_path('cohort-icon.png'), :class => 'icon-width-xlg' %>
+                              <% elsif users == @students %>
+                              <%= image_tag image_path('student-icon.png'), :class => 'icon-width-xlg' %>
+                              <% elsif users = @courses %>
+                              <%= image_tag image_path('course-icon.png'), :class => 'icon-width-xlg' %>
+                              <% else %>
+                              <%= image_tag image_path('instructor-icon.png'), :class => 'icon-width-xlg' %>
+                              <% end %>
                              </div>
                              <div class="p-2 col-lg-9">
 
