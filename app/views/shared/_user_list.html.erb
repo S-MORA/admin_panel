@@ -21,34 +21,33 @@
           <div class="col-lg-12">
             <div class="bx-color p-3">
                 <div class="row row-center-100 no-gutters">
-                      <div class="col-2">
+                      <div class="col-4">
                         <% if users == @instructors %>
                         <%= image_tag image_path('instructor-icon.png'), :class => 'icon-width-lg' %>
                         <% else %>
                         <%= image_tag image_path('student-icon.png'), :class => 'icon-width-lg' %>
                         <% end %>
                       </div>
-                      <div class="col-2 md-font-white">
-                        <div class="text-center">
-                  <% if users == @instructors   %>
-                      Instructors
-                  <% else %>
-                       Students
-                 <% end %>
-                        </div>
+                      <div class="col-4 md-font-white">
+
                       <div class="text-center">
+                        <% if users == @instructors   %>
+                            Instructors:
+                        <% else %>
+                             Students:
+                       <% end %>
                         <%=  users.length %>
                         </div>
                       </div>
 
-                      <div  class="col-1 offset-7">
+                      <div  class="col-4">
                     <% if users == @instructors %>
                       <%= link_to new_instructor_path do %>
-                         <i class="fas fa-plus-circle fa-2x"></i>
+                         <i class="fas fa-plus-circle fa-2x float-right"></i>
                       <% end %>
                     <% else %>
                      <%= link_to new_student_path do %>
-                       <i class="fas fa-plus-circle fa-2x"></i>
+                       <i class="fas fa-plus-circle fa-2x float-right"></i>
                      <% end %>
                     <% end %>
                       </div>

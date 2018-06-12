@@ -15,23 +15,20 @@
     <div class="row mx-3 mt-4">
       <div class="col-lg-12">
         <div class="bx-color p-3">
-            <div class="row">
+            <div class="row row-center-100 no-gutters">
 
-                  <div style="display: flex; justify-content:center; align-items:center" class="col-md-2">
+                  <div class="col-4">
                     <%= image_tag image_path('cohort-icon.png'), :class => 'icon-width-lg' %>
                   </div>
-                  <div class="col-md-2 md-font-white mt-3">
+                  <div class="col-4 md-font-white">
                     <div class="text-center">
-              Cohorts
-                    </div>
-                    <div class="text-center">
-              <%= @course.cohorts.length %>
+              Cohorts: <%= @course.cohorts.length %>
                     </div>
                   </div>
 
-                  <div style="display: flex; justify-content:center; align-items:center" class="col-md-1 offset-md-7">
+                  <div class="col-4">
                   <%= link_to new_cohort_path do %>
-                     <i class="fas fa-plus-circle fa-3x icon-width-lg"></i>
+                     <i class="fas fa-plus-circle fa-2x float-right"></i>
                   <% end %>
                   </div>
               </div>
