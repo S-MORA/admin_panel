@@ -14,7 +14,7 @@ Designed User Interface in Sketch
 
 ----
 ## How To Use
-Create, read, update, & delete students, instructors, courses, cohorts, and students enrollment.
+Create, read, update, & delete students, instructors, courses, cohorts, and student's enrollment.
 
 
 Post MVP
