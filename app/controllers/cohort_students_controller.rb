@@ -8,9 +8,6 @@ class CohortStudentsController < ApplicationController
     CohortStudent.create(cohort_student_params)
     redirect_to cohort_path(cohort_student_params[:cohort_id])
   end
-  def edit
-    @cohort_student = CohortStudent.find(params[:id])
-  end
   def update
     cohort_student = CohortStudent.find(params[:id])
     cohort_student.update(cohort_student_params)
