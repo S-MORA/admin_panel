@@ -20,4 +20,4 @@ Create, read, update, & delete students, instructors, courses, cohorts, and stud
 
 Post MVP
 ----
-Yet to come: User authentication, D3 & file upload to AWS S3.
+Yet to come: Deletion with AJAX, User authentication, D3 & file upload to AWS S3.
