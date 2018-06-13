@@ -14,8 +14,9 @@ class CohortStudentsController < ApplicationController
     redirect_to cohort_path(cohort_student_params[:cohort_id])
   end
   def destroy
-    CohortStudent.destroy(params[:id])
-    redirect_to cohort_path(cohort_student_params[:cohort_id])
+    cohort_student = CohortStudent.find(params[:id])
+    cohort_student.destroy
+    redirect_to cohort_student.cohort
   end
 private
   def cohort_student_params
