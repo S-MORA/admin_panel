@@ -7,7 +7,7 @@
           <%= @course.name %>
         </div>
         <div class="xlg-font float-right">
-          Logout
+          <%= link_to 'Log Out', destroy_user_session_path, method: 'DELETE'%>
         </div>
       </div>
     </div>
@@ -48,7 +48,7 @@
                       <div class="row m-0">
 
                         <div class="card-title col-lg-3 justify-content-center align-self-center">
-                            <i style="color:black" class="fas fa-user-circle fa-3x"></i>
+                            <%= image_tag image_path('cohort-icon.png'), :class => 'icon-width' %>
                          </div>
 
                          <div class="p-2 col-lg-9">
