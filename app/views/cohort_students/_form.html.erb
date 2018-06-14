@@ -1,14 +1,14 @@
 <%= form_for @cohort_student do |c| %>
- <div class="field last m-2">
+ <div class="field last m-2 border-bottom-0">
     <%= c.label :cohort_id %>
     <%= c.select :cohort_id, options_for_select(@cohorts.map { |c| [c.name, c.id] })%>
 
  </div>
- <div class="field last m-2">
+ <div class="field last m-2 border-bottom-0">
     <%= c.label :student_id %>
     <%= c.select :student_id, options_for_select(@students.map { |s| [s.first_name + ' ' + s.last_name, s.id] })%>
  </div>
- <div class="field m-2">
+ <div class="field m-2 border-bottom-0">
   <%=   c.submit "Add Student to Cohort"  %>
  </div>
 <% end %>

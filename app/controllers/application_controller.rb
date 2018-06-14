@@ -8,7 +8,7 @@ class ApplicationController < ActionController::Base
  def resolve_layout
    puts controller_name
    case controller_name
-   when "home", 'registrations'
+   when "home", 'registrations', 'sessions'
      "application"
    else
      "logged_in"
