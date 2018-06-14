@@ -33,14 +33,16 @@
   height: 100%;
 }
   .field {
+    border: none;
+    outline: none;
+    background: none;
     display: block;
-    border: 1px solid $gray;
-    float: left;
-    width: 100%;
+    margin-top: 15px;
+    padding-bottom: 5px;
+    font-size: 18px;
+    letter-spacing: 2px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
 
-    &.last {
-    border: 0;
-    }
 
     label {
       display: inline;
@@ -66,7 +68,14 @@
   input[type='radio'] {
     width: 5%;
   }
+  input[type='submit'], input[type='email'] {
+  width: 100%;
+     border: 1px solid black;
+    padding: 10px;
+    cursor: pointer;
 
+
+}
 
   // button
 

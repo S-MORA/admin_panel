@@ -1,4 +1,6 @@
 class CohortStudentsController < ApplicationController
+  before_action :authenticate_user!
+  
   def new
     @cohorts = Cohort.all
     @students = Student.all

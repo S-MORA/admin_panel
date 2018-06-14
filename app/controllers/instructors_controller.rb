@@ -1,12 +1,11 @@
 class InstructorsController < ApplicationController
+  before_action :authenticate_user!
+  
   def index
     @instructors = Instructor.all
   end
   def new
     @instructor = Instructor.new
-  end
-  def show
-    @instructor = Instructor.find(params[:id])
   end
   def create
     Instructor.create(instructor_params)

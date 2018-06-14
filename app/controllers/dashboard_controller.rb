@@ -1,4 +1,6 @@
 class DashboardController < ApplicationController
+  before_action :authenticate_user!
+  
     def home
       @students = Student.all
       @instructors = Instructor.all

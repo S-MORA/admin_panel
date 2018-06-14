@@ -5,85 +5,12 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-<link href="https://fonts.googleapis.com/css?family=Open+Sans:600|Raleway|Roboto:500" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:700|Raleway:400" rel="stylesheet">
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
   </head>
 
   <body>
-    <div class="wrapper">
-      <!-- Sidebar Holder -->
-      <nav id="sidebar">
-        <div class="sidebar-header m-4">
-          <div class="fit-content mx-auto">
-            <%= image_tag image_path('logo.png')%>
-          </div>
-          <div class="fit-content mx-auto m-3">
-            <h3 class="md-open-sans m-2"><strong>GRADE</strong>LINK</h3>
-          </div>
-
-        </div>
-
-
-        <ul class="list-unstyled components">
-          <div style="color:#fefef9" class="fit-content mx-auto">
-            <i class="fas fa-user-circle mx-auto fa-3x"></i>
-          </div>
-
-          <div class="fit-content mx-auto">
-            <div class="md-font-white">Demo</div>
-          </div>
-          <div  class="fit-content mx-auto">
-            <div class="xsm-gray">Admin</div>
-          </div>
-
-
-          <div class="container-fluid">
-            <div class="row">
-              <div class="col-lg-12 pr-0">
-                <li class="active">
-
-                  <a href="/" class="my-3">
-                    <i class="fas fa-home ml-4"></i>
-                   <span class="float-right mr-4">Dashboard</span>
-                  </a>
-
-                </li>
-              </div>
-              <div class="col-lg-12 pr-0">
-                <li>
-                  <%= link_to instructors_path, class: "my-3" do %>
-                    <i class="fas fa-users ml-4"></i>
-                   <span class="float-right mr-4">Instructors</span>
-                  <% end %>
-                </li>
-              </div>
-              <div class="col-lg-12 pr-0">
-                <li>
-                  <%= link_to students_path, class: "my-3" do %>
-                    <i class="fas fa-users ml-4"></i>
-                   <span class="float-right mr-4">Students</span>
-                  <% end %>
-                </li>
-              </div>
-              <div class="col-lg-12 pr-0">
-                <li>
-                  <%= link_to courses_path, class: "my-3" do %>
-                    <i class="fas fa-book ml-4"></i>
-                   <span class="float-right mr-4">Courses</span>
-                  <% end %>
-                </li>
-              </div>
-            </div>
-          </div>
-
-        </ul>
-      </nav>
-      <div class="d-none sideBarSection" style="background-color: #1d3037">
-        <button style="color:#7db6ab" type="button" id="sidebarCollapse" class="btn navbar-btn m-2 mt-4">
-          <i class="fas fa-bars"></i>
-          </button>
-      </div>
 
     <%= yield %>
   </body>

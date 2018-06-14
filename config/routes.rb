@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  devise_for :users, controllers: {
+      registrations: 'users/registrations'
+    }
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   resources :cohorts
   resources :instructors
@@ -6,9 +9,8 @@ Rails.application.routes.draw do
   resources :students
   resources :cohort_students
 
-  root to: 'dashboard#home'
+  root to: "home#index"
 
-   # post '/cakes/:id/toggle-status', to: 'cakes#toggle_status', as: :toggle_cake_status
-   #
-   # post '/muffins/:id/toggle-status', to: 'muffins#toggle_status', as: :toggle_muffin_status
+  get '/home', to: 'dashboard#home'
+
 end

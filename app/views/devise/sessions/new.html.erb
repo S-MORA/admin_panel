@@ -1,0 +1,33 @@
+<div id="content">
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-lg-6 offset-lg-3">
+        <div class="md-open-sans text-center">
+          Begin Managing Your School<Br>
+          <%= image_tag image_path('logo.png'), class: 'm-3'%>
+        </div>
+
+        <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+          <div class="field">
+            <%= f.label :email %><br />
+            <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+          </div>
+
+          <div class="field">
+            <%= f.label :password %><br />
+            <%= f.password_field :password, autocomplete: "off" %>
+          </div>
+
+          <div class="mt-3 actions">
+            <%= f.submit "Log in" %>
+          </div>
+        <% end %>
+
+        <div class="text-center m-3 md-open-sans" style="letter-spacing: 1.2px">
+          If you don't have an account <Br>
+          <%= link_to 'Sign Up', new_user_registration_path%>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
