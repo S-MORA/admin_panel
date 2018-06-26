@@ -20,4 +20,10 @@ $(document).ready(function() {
     $("#sidebar").toggleClass("active");
     $(this).toggleClass("active");
   });
+
+  $('.fa-trash').on('ajax:success', function(e) {
+    $(e.target).parents('.card').remove();
+    console.log(e)
+    toastr.success('Your todo has been successfully deleted');
+  });
 });
