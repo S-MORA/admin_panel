@@ -14,16 +14,3 @@
 //= require jquery/dist/jquery
 //= require toastr/build/toastr.min.js
 //= require_tree .
-
-$(document).ready(function() {
-  $("#sidebarCollapse").on("click", function() {
-    $("#sidebar").toggleClass("active");
-    $(this).toggleClass("active");
-  });
-
-  $('.fa-trash').on('ajax:success', function(e) {
-    $(e.target).parents('.card').remove();
-    console.log(e)
-    toastr.success('Your todo has been successfully deleted');
-  });
-});

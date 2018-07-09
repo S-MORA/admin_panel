@@ -1,7 +1,6 @@
 # Administrative Dashboard for a fictitious School
-#### Current Project/Still in Beta
 
-Demo Log in: test@gmail.com password: test123 
+Demo Log in: test@gmail.com password: test123
 ----
 ## Environment
 
@@ -21,4 +20,4 @@ Create, read, update, & delete students, instructors, courses, cohorts, and stud
 
 Post MVP
 ----
-Yet to come: Deletion with AJAX, D3 & file upload to AWS S3.
+Image upload to AWS S3.

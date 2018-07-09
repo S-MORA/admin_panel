@@ -54,7 +54,7 @@
                              </div>
                              <div class="p-2 col-lg-9">
                                  <span class="card-title"> <%=student.first_name + ' ' + student.last_name%></span>
-                                <%= link_to cohort_student_path(find_cohort_student(student, @cohort)), method: :delete, remote: true do %>
+                                <%= link_to cohort_student_path(find_cohort_student(student, @cohort)), method: :delete, remote:true do %>
                                   <i class="fas fa-trash float-right m-1"></i>
                                 <% end %>
 
