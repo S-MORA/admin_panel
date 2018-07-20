@@ -12,7 +12,9 @@ Devise for simple user authentication
 
 
 Designed User Interface in Sketch
+![alt text](https://raw.githubusercontent.com/S-MORA/admin_panel/master/app/assets/images/students-screenshot.png)
 ![alt text](https://raw.githubusercontent.com/S-MORA/admin_panel/master/app/assets/images/admin_panel_Screenshot.png)
+![alt text](https://raw.githubusercontent.com/S-MORA/admin_panel/master/app/assets/images/sign-in-screenshot.png)
 
 ----
 ## How To Use
