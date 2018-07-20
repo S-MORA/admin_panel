@@ -1,13 +1,17 @@
 # Administrative Dashboard for a fictitious School
 
 Demo Log in: test@gmail.com password: test123
+
+Create Students, Instructors, Cohorts and Courses.   
+Add/Remove Instructors and Students to Courses.  
+Add/Remove Cohorts to Courses.  
 ----
 ## Environment
 
 Ruby on Rails    
 jQuery for sidebar collapse  
 Bootstrap for cards and grid     
-PostgreSQL/Active Record for DB design   
+PostgreSQL/Active Record for relational DB design   
 Devise for simple user authentication     
 
 
