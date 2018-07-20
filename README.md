@@ -3,8 +3,8 @@
 Demo Log in: test@gmail.com password: test123
 
 Create Students, Instructors, Cohorts and Courses.   
-Add/Remove Instructors and Students to Courses.  
-Add/Remove Cohorts to Courses.  
+Add/Remove Instructors and Students to/from Courses.  
+Add/Remove Cohorts to/from Courses.  
 ----
 ## Environment
 
